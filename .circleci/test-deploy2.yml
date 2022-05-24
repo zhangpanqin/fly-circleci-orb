@@ -1,0 +1,14 @@
+version: 2.1
+
+jobs:
+  # Create a job to test the commands of your orbs.
+  # You may want to add additional validation steps to ensure the commands are working as expected.
+  test-continue:
+    steps:
+      - run:
+          command: |
+            echo: 11
+workflows:
+  test-deploy:
+    jobs:
+      - command-tests:
