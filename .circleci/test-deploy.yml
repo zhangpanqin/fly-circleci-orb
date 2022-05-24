@@ -41,5 +41,5 @@ workflows:
       - orb-tools/continue:
           pipeline-number: << pipeline.number >>
           vcs-type: << pipeline.project.type >>
-          requires: [orb-tools/publish]
+          requires: [orb-tools/publish, command-tests, orb-tools/pack]
           config-path: .circleci/test-deploy2.yml
